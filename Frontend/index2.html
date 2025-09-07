@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta name="viewport" content="with=device-width, initial scale=1.0">
+  <title>University Website Design -  Easy Tutorials</title>
+  <link rel="stylesheet" href="style.css"> 
+<head>
+  <section class="header">
+    <nav>
+      <a href="website.html"><img src="organ-angel-high-resolution-logo-transparent.png"></a>
+      <div class="nav-links">
+        <ul>
+          <li><a href="wesbite.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="register.html">REGISTER</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+    </nav>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organ Donation Registration</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: white; /* Setting font color to white */
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7));
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgb(113, 164, 206);
+        }
+        h1 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], select, textarea, input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Organ Donation Registration</h1>
+        <form id="donationForm">
+          <label for="recipientId">Recipient ID:</label><br>
+          <input type="text" id="recipientId" name="recipientId" required><br>
+          
+          <label for="age">Age:</label><br>
+          <input type="number" id="age" name="age" required><br>
+          
+          <label for="gender">Gender:</label><br>
+          <select id="gender" name="gender" required>
+            <option value=""></option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select><br>
+          
+          <label for="bloodGroup">Blood Group:</label><br>
+          <select id="bloodGroup" name="bloodGroup">
+            <option value=""></option>
+            <option value="O+">O+</option>
+            <option value="B+">B+</option>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B-">B-</option>
+            <option value="O-">O-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+          </select><br>
+          
+          <label for="phoneNumber">Phone Number:</label><br>
+          <input type="tel" id="phoneNumber" name="phoneNumber" required><br>
+          
+          <label for="email">Email:</label><br>
+          <input type="email" id="email" name="email" required><br>
+          
+          <label for="location">Enter state of residence:</label><br>
+          <input type="text" id="location" name="location" required><br>
+          
+          <label for="organToReceive">Organ to Receive:</label><br>
+          <select id="organToReceive" name="organToReceive" required>
+            <option value=""></option>
+            <option value="Heart">Heart</option>
+            <option value="Liver">Liver</option>
+            <option value="Pancreas">Pancreas</option>
+            <option value="Lungs">Lungs</option>
+          </select><br>
+          
+          <label for="previousCardiacConditions">Previous Cardiac Conditions (Fill only if organ to recieve is Heart):</label><br>
+          <select id="previousCardiacConditions" name="previousCardiacConditions">
+            <option value=""></option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select><br>
+          
+          <label for="ejectionFraction">Ejection Fraction in % (Fill only if organ to recieve is Heart):</label><br>
+          <input type="number" id="ejectionFraction" name="ejectionFraction"><br>
+      
+          <label for="meldScore">MELD Score (Fill only if organ to recieve is Liver):</label><br>
+          <input type="number" id="meldScore" name="meldScore"><br>
+      
+          <label for="hlaTyping">HLA Typing:</label><br>
+          <select id="hlaTyping" name="hlaTyping" required>
+            <option value=""></option>
+            <option value="HLA-A: 02:01">HLA-A: 02:01</option>
+            <option value="HLA-B: 07:02">HLA-B: 07:02</option>
+            <option value="HLA-C: 03:03">HLA-C: 03:03</option>
+            <option value="HLA-DRB1: 15:01">HLA-DRB1: 15:01</option>
+            <option value="HLA-DQB1: 06:02">HLA-DQB1: 06:02</option>
+            <option value="HLA-A: 01:01">HLA-A: 01:01</option>
+            <option value="HLA-B: 08:01">HLA-B: 08:01</option>
+            <option value="HLA-C: 07:01">HLA-C: 07:01</option>
+            <option value="HLA-DRB1: 11:01">HLA-DRB1: 11:01</option>
+            <option value="HLA-DQB1: 03:01">HLA-DQB1: 03:01</option>
+          </select><br>
+      
+          <label for="totalLungCapacity">Total Lung Capacity in Litres (Fill only if organ to recieve is Lungs):</label><br>
+          <input type="number" id="totalLungCapacity" name="totalLungCapacity"><br>
+      
+          <label for="fev1">FEV1 in Litres (Fill only if organ to recieve is Lungs):</label><br>
+          <input type="number" id="fev1" name="fev1"><br>
+      
+          <label for="dlco">DLCO in mL/min/mmHg (Fill only if organ to recieve is Lungs):</label><br>
+          <input type="number" id="dlco" name="dlco"><br>
+      
+          <label for="length">Length of Pancreas (Fill only if organ to recieve is Pancreas):</label><br>
+          <input type="number" id="length" name="length"><br>
+      
+          <label for="width">Width of Pancreas (Fill only if organ to recieve is Pancreas):</label><br>
+          <input type="number" id="width" name="width"><br>
+      
+          <label for="thickness">Thickness of Pancreas (Fill only if organ to recieve is Pancreas):</label><br>
+          <input type="number" id="thickness" name="thickness"><br>
+      
+          <label for="insulinSecretionLevels">Insulin Secretion Levels in μIU/mL (Fill only if organ to recieve is Pancreas):</label><br>
+          <input type="number" id="insulinSecretionLevels" name="insulinSecretionLevels"><br>
+      
+          <label for="EmergencyContactName">Enter the name of person you wish to keep as emergency contact: </label><br>
+          <input type="text", id="EmergencyContactName", name="EmergencyContactName"><br>
+      
+          <label for="Relationship">Relationship with Emergencyy Contact: </label><br>
+          <input type="text", id="Relationship", name="Relationship"><br>
+      
+          <label for="EmergencyContactPhoneNo.">Emergency Contact Phone No.: </label><br>
+          <input type="tel", id="EmergencyContactPhoneNo", name="EmergencyContactPhoneNo"><br>
+          <!-- Add the rest of the fields here -->
+          
+          <label for="declaration">I hereby declare that all the information provided is true to the best of my knowledge.</label>
+            <input type="checkbox" id="declaration" name="declaration" required>
+
+            <input type="submit" value="Register">
+        
+        </form>
+        
+    </div>
+</body>
+</html>
